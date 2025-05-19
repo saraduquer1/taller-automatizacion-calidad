@@ -1,14 +1,12 @@
-# Imagen base con Java 21 (alpine para que sea ligera)
-FROM eclipse-temurin:21-jdk-alpine
-
-# Crear directorio de trabajo dentro del contenedor
+# Etapa 1: Build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copiar el archivo .jar al contenedor
-COPY gestor-0.0.1-SNAPSHOT.jar app.jar
-
-# Exponer el puerto (ajusta si tu app usa otro)
+# Etapa 2: Run
+FROM eclipse-temurin:21-jdk-alpine
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
 EXPOSE 8080
-
-# Comando para ejecutar el .jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
