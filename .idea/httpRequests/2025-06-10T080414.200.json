@@ -1,0 +1,67 @@
+[
+  {
+    "id": "4bc870e7-8dfc-4628-8caf-7328a61bc37d",
+    "nombre": "alberto",
+    "apellido": "amaya"
+  },
+  {
+    "id": "5a26f762-7835-408e-80b0-4a2e7ad464b4",
+    "nombre": "alberto",
+    "apellido": "amaya"
+  },
+  {
+    "id": "b0180980-1bcb-4ea4-9cfe-ead74bd30afa",
+    "nombre": "alberto",
+    "apellido": "amaya"
+  },
+  {
+    "id": "fc0cc975-cbe2-46c4-ae45-e96bddf0f321",
+    "nombre": "Laura",
+    "apellido": "González"
+  },
+  {
+    "id": "9116ac85-3d90-484f-a0ce-6ef1aa9f272f",
+    "nombre": "Miguel",
+    "apellido": "Rojas"
+  },
+  {
+    "id": "00c27a3e-f11f-464e-93cf-2c8ae8313ff3",
+    "nombre": "Sofía",
+    "apellido": "Martínez"
+  },
+  {
+    "id": "aed78f67-7c98-4e39-a8f2-997b5976e9d2",
+    "nombre": "Carlos",
+    "apellido": "Díaz"
+  },
+  {
+    "id": "afe06f34-6a84-41ea-9329-a9f533dd6b55",
+    "nombre": "Ana",
+    "apellido": "Castro"
+  },
+  {
+    "id": "1a7f21f0-aacb-406d-9974-10d897607ef8",
+    "nombre": "Daniel",
+    "apellido": "Moreno"
+  },
+  {
+    "id": "2a48f188-e940-4834-858c-b519ad6c6030",
+    "nombre": "Valentina",
+    "apellido": "Suárez"
+  },
+  {
+    "id": "9a4c60c6-41a3-4698-8d3f-e434d32cbf11",
+    "nombre": "Julián",
+    "apellido": "Navarro"
+  },
+  {
+    "id": "ab492338-350c-4892-b3c6-6abb79671caf",
+    "nombre": "Camila",
+    "apellido": "Fernández"
+  },
+  {
+    "id": "d204c8b3-ac09-4368-aacd-5e8cb69c96cf",
+    "nombre": "Andrés",
+    "apellido": "Vargas"
+  }
+]

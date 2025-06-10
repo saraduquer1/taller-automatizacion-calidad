@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gestor.iml" filepath="$PROJECT_DIR$/.idea/gestor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PetManager-Sistema-de-gestion-de-clientes.iml" filepath="$PROJECT_DIR$/.idea/PetManager-Sistema-de-gestion-de-clientes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gestor/gestor.iml" filepath="$PROJECT_DIR$/gestor/gestor.iml" />
     </modules>
   </component>
 </project>

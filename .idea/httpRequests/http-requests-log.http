@@ -1,0 +1,9 @@
+GET http://localhost:8080/clientes/listar
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+<> 2025-06-10T080414.200.json
+
+###
+
