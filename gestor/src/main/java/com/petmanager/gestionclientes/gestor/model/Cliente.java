@@ -1,4 +1,5 @@
 package com.petmanager.gestionclientes.gestor.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -28,9 +29,10 @@ public class Cliente {
 
     private String direccion;
 
-    private LocalDateTime fecha_creacion;
+    private LocalDateTime fechaCreacion;
 
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Preferencia> preferencias = new ArrayList<>();
 
     public Cliente(UUID id, String nombre, String apellido, String correoElectronico, String telefono, String direccion) {
@@ -40,10 +42,10 @@ public class Cliente {
         this.correoElectronico = correoElectronico;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.fecha_creacion = LocalDateTime.now();
+        this.fechaCreacion = LocalDateTime.now();
     }
     public Cliente(){
-        this.fecha_creacion = LocalDateTime.now();
+        this.fechaCreacion = LocalDateTime.now();
     }
 
     public UUID getId() {
@@ -100,12 +102,12 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public LocalDateTime getFecha_creacion() {
-        return fecha_creacion;
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
     }
 
-    public void setFecha_creacion(LocalDateTime fecha_creacion) {
-        this.fecha_creacion = fecha_creacion;
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     public List<Preferencia> getPrefencias() {
@@ -137,7 +139,7 @@ public class Cliente {
                 ", correo_electronico='" + correoElectronico + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", direccion='" + direccion + '\'' +
-                ", fecha_creacion=" + fecha_creacion +
+                ", fecha_creacion=" + fechaCreacion +
                 '}';
     }
 }

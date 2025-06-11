@@ -1,16 +1,12 @@
 package com.petmanager.gestionclientes.gestor.controller;
 
-import com.petmanager.gestionclientes.gestor.DTO.*;
-import com.petmanager.gestionclientes.gestor.model.Cliente;
+import com.petmanager.gestionclientes.gestor.dto.*;
 import com.petmanager.gestionclientes.gestor.service.ClienteService;
 import jakarta.persistence.EntityNotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -18,8 +14,11 @@ import java.util.UUID;
 @RequestMapping("/clientes")
 public class ClienteController {
 
-    @Autowired
-    private ClienteService clienteService;
+    private final ClienteService clienteService;
+
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
+    }
 
     // 1. Obtener todos los clientes
     @GetMapping("/listar")
@@ -30,29 +29,29 @@ public class ClienteController {
 
     // 2. Obtener detalle de un cliente por ID
     @GetMapping("/{id}")
-    public ResponseEntity<?> obtenerClientePorId(@PathVariable UUID id) {
+    public ResponseEntity<ClienteDetalleDTO> obtenerClientePorId(@PathVariable UUID id) {
         try {
             ClienteDetalleDTO cliente = clienteService.getUsuario(id);
             return ResponseEntity.ok(cliente);
-        } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     // 3. Buscar clientes por distintos parámetros
     @PostMapping("/buscar")
-    public ResponseEntity<?> buscarClientes(@RequestBody ClienteBusquedaDTO dto) {
+    public ResponseEntity<List<ClienteDetalleDTO>> buscarClientes(@RequestBody ClienteBusquedaDTO dto) {
         try {
             List<ClienteDetalleDTO> resultados = clienteService.buscarClientes(dto);
             return ResponseEntity.ok(resultados);
         } catch (EntityNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     // 4. Crear cliente con preferencias
     @PostMapping("/registrar")
-    public ResponseEntity<?> registrarCliente(@RequestBody ClienteRegistroDTO dto, Integer usuario_id) {
+    public ResponseEntity<String> registrarCliente(@RequestBody ClienteRegistroDTO dto, Integer usuario_id) {
         try {
             clienteService.CrearClienteConPreferencias(dto, usuario_id);
             return ResponseEntity.status(HttpStatus.CREATED).body("Cliente registrado correctamente.");
@@ -66,7 +65,7 @@ public class ClienteController {
 
     // 5. Eliminar cliente con auditoría (requiere palabra clave BORRAR)
     @DeleteMapping("/eliminar")
-    public ResponseEntity<?> eliminarCliente(@RequestBody EliminarClienteDTO dto) {
+    public ResponseEntity<String> eliminarCliente(@RequestBody EliminarClienteDTO dto) {
         try {
             clienteService.eliminarClienteConAuditoria(dto);
             return ResponseEntity.ok("Cliente eliminado correctamente.");

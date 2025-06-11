@@ -1,6 +1,6 @@
 package com.petmanager.gestionclientes.gestor.service;
 
-import com.petmanager.gestionclientes.gestor.DTO.*;
+import com.petmanager.gestionclientes.gestor.dto.*;
 import com.petmanager.gestionclientes.gestor.model.Cliente;
 import com.petmanager.gestionclientes.gestor.repository.ClienteRepository;
 import jakarta.persistence.EntityManager;
@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.test.util.ReflectionTestUtils;
 
 import java.util.*;
 
@@ -30,6 +31,7 @@ class ClienteServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
+        ReflectionTestUtils.setField(clienteService, "entityManager", entityManager);
     }
 
     @Test

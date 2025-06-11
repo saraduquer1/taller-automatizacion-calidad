@@ -1,4 +1,4 @@
-package com.petmanager.gestionclientes.gestor.DTO;
+package com.petmanager.gestionclientes.gestor.dto;
 
 import java.util.UUID;
 

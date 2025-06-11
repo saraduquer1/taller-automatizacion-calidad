@@ -1,10 +1,10 @@
-package com.petmanager.gestionclientes.gestor.DTO;
+package com.petmanager.gestionclientes.gestor.dto;
 import java.util.List;
 import java.util.regex.Pattern;
 
 public class ClienteRegistroDTO {
 
-    private Integer usuario_id;
+    private Integer usuarioId;
     private String nombre;
     private String apellidos;
     private String correoElectronico;
@@ -14,8 +14,8 @@ public class ClienteRegistroDTO {
 
     public ClienteRegistroDTO(){}
 
-    public ClienteRegistroDTO(Integer usuario_id, String nombre, String apellidos, String correoElectronico, String telefono, String direccion, List<Integer> categorias) {
-        this.usuario_id = usuario_id;
+    public ClienteRegistroDTO(Integer usuarioId, String nombre, String apellidos, String correoElectronico, String telefono, String direccion, List<Integer> categorias) {
+        this.usuarioId = usuarioId;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.correoElectronico = correoElectronico;
@@ -24,12 +24,12 @@ public class ClienteRegistroDTO {
         this.categorias = categorias;
     }
 
-    public Integer getUsuario_id() {
-        return usuario_id;
+    public Integer getUsuarioId() {
+        return usuarioId;
     }
 
-    public void setUsuario_id(Integer usuario_id) {
-        this.usuario_id = usuario_id;
+    public void setUsuarioId(Integer usuarioId) {
+        this.usuarioId = usuarioId;
     }
 
     public String getNombre() {

@@ -8,6 +8,7 @@ class GestorApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// This test will simply check if the application context loads successfully.
 	}
 
 }

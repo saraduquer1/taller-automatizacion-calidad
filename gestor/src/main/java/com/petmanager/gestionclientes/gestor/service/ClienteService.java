@@ -1,11 +1,10 @@
 package com.petmanager.gestionclientes.gestor.service;
-import com.petmanager.gestionclientes.gestor.DTO.*;
+import com.petmanager.gestionclientes.gestor.dto.*;
 import com.petmanager.gestionclientes.gestor.model.Cliente;
 import com.petmanager.gestionclientes.gestor.repository.ClienteRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.PersistenceContext;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
@@ -15,23 +14,30 @@ import java.util.stream.Collectors;
 @Service
 public class ClienteService {
 
-    @Autowired
-    ClienteRepository clienteRepository;
+    private final ClienteRepository clienteRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
+
+    public ClienteService(ClienteRepository clienteRepository) {
+        this.clienteRepository = clienteRepository;
+    }
 
 
     public List<ClienteVistaDto> getAllClientes() {
         return clienteRepository.findAll().stream()
                 .map(this::ClienteToVIstaDTO)
-                .collect(Collectors.toList());
+                .toList();
     }
 
-    public ClienteDetalleDTO getUsuario(UUID id) throws Exception {
-        Cliente cliente = clienteRepository.findById(id)
-                .orElseThrow(() -> new Exception("Usuario no encontrado con id: " + id));
-        return ClienteToDetalleDTO(cliente);
+    public ClienteDetalleDTO getUsuario(UUID id) {
+        try{
+            Cliente cliente = clienteRepository.findById(id)
+                    .orElseThrow(() -> new Exception("Usuario no encontrado con id: " + id));
+            return ClienteToDetalleDTO(cliente);
+        } catch (Exception e) {
+            throw new EntityNotFoundException("Cliente no encontrado");
+        }
     }
 
     public List<ClienteDetalleDTO> buscarClientes(ClienteBusquedaDTO dto) {
@@ -54,11 +60,11 @@ public class ClienteService {
                         (String) row[4],                // teléfono
                         (String) row[5]                 // dirección
                 ))
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Transactional
-    public void CrearClienteConPreferencias(ClienteRegistroDTO dto, Integer usuario_id) {
+    public void CrearClienteConPreferencias(ClienteRegistroDTO dto, Integer usuarioId) {
         // Validar si el correo ya existe
         if (clienteRepository.findByCorreoElectronico(dto.getCorreoElectronico()).isPresent()) {
             throw new IllegalArgumentException("El correo electrónico ya está registrado.");
@@ -78,7 +84,7 @@ public class ClienteService {
                 .setParameter("telefono", dto.getTelefono())
                 .setParameter("direccion", dto.getDireccion())
                 .setParameter("categorias", categoriasCsv) // Ahora string CSV
-                .setParameter("usuarioId", usuario_id)
+                .setParameter("usuarioId", usuarioId)
                 .getSingleResult();
     }
 

@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7692519e-9b6f-4668-beb1-c5f32b2b14c7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gestor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/DTO/ClienteBusquedaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/dto/ClienteBusquedaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/DTO/ClienteDetalleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/dto/ClienteDetalleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/DTO/ClienteRegistroDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/dto/ClienteRegistroDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/DTO/ClienteVistaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/dto/ClienteVistaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/DTO/EliminarClienteDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/dto/EliminarClienteDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/model/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/main/java/com/petmanager/gestionclientes/gestor/service/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/test/java/com/petmanager/gestionclientes/gestor/GestorApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/test/java/com/petmanager/gestionclientes/gestor/GestorApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/test/java/com/petmanager/gestionclientes/gestor/controller/ClienteControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gestor/src/test/java/com/petmanager/gestionclientes/gestor/service/ClienteServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/gestor/src/test/java/com/petmanager/gestionclientes/gestor/service/ClienteServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +37,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;303e3fee6dcffec994f8ec6924f9d9c3a1c7b0af&quot; value=&quot;###&amp;#10;GET http://localhost:8080/clientes/listar&quot; /&gt;&#10;  &lt;entry key=&quot;49b40c351c0bf32cbab7e5cc641f69ff5874e26e&quot; value=&quot;###&amp;#10;POST http://localhost:8080/clientes/buscar&amp;#10;Content-Type: application/json&amp;#10;&amp;#10;{&amp;#10;  &amp;quot;id&amp;quot;: &amp;quot;&amp;quot;,&amp;#10;  &amp;quot;nombre&amp;quot;: &amp;quot;&amp;quot;,&amp;#10;  &amp;quot;apellidos&amp;quot;: &amp;quot;&amp;quot;,&amp;#10;  &amp;quot;correoElectronico&amp;quot;: &amp;quot;&amp;quot;&amp;#10;}&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -75,7 +92,7 @@
       <recent name="com.petmanager.gestionclientes.gestor.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClienteServiceTest">
+  <component name="RunManager" selected="Spring Boot.GestorApplication">
     <configuration name="ClienteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gestor" />
       <extension name="coverage">
@@ -193,6 +210,8 @@
       <workItem from="1749486781659" duration="2627000" />
       <workItem from="1749521653283" duration="23560000" />
       <workItem from="1749588996069" duration="4128000" />
+      <workItem from="1749649296466" duration="6142000" />
+      <workItem from="1749659736155" duration="3152000" />
     </task>
     <servers />
   </component>

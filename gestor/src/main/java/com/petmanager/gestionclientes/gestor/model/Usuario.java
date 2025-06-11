@@ -17,7 +17,7 @@ public class Usuario {
     @Column(name = "apellidos")
     private String apellido;
 
-    private String correo_electronico;
+    private String correoElectronico;
 
     @Column(name = "password")
     private String contrasena;
@@ -25,11 +25,11 @@ public class Usuario {
     private String rol;
 
     public Usuario(){}
-    public Usuario(Integer id, String nombre, String apellido, String correo_electronico, String contrasena, String rol) {
+    public Usuario(Integer id, String nombre, String apellido, String correoElectronico, String contrasena, String rol) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.correo_electronico = correo_electronico;
+        this.correoElectronico = correoElectronico;
         this.contrasena = contrasena;
         this.rol = rol;
     }
@@ -61,15 +61,15 @@ public class Usuario {
         this.apellido = apellido;
     }
 
-    public String getCorreo_electronico() {
-        return correo_electronico;
+    public String getCorreoElectronico() {
+        return correoElectronico;
     }
 
-    public void setCorreo_electronico(String correo_electronico) {
-        if (correo_electronico == null || !Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", correo_electronico)) {
+    public void setCorreoElectronico(String correoElectronico) {
+        if (correoElectronico == null || !Pattern.matches("^[A-Za-z0-9+_.-]+@(.+)$", correoElectronico)) {
             throw new IllegalArgumentException("El email no tiene un formato válido");
         }
-        this.correo_electronico = correo_electronico;
+        this.correoElectronico = correoElectronico;
     }
 
     public String getContrasena() {
