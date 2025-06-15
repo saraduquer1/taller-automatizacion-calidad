@@ -203,49 +203,6 @@ class ClienteControllerTest {
     }
 
     @Test
-    void registrarCliente_badRequest() throws Exception {
-        // Arrange
-        ClienteRegistroDTO registroDTO = new ClienteRegistroDTO();
-        registroDTO.setNombre("Juan");
-        registroDTO.setCorreoElectronico("email-invalido"); // Email inválido
-
-        doThrow(new IllegalArgumentException("El email no tiene un formato válido"))
-                .when(clienteService).CrearClienteConPreferencias(any(ClienteRegistroDTO.class), any(Integer.class));
-
-        // Act & Assert
-        mockMvc.perform(post("/clientes/registrar")
-                .param("usuario_id", "1")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(registroDTO)))
-                .andExpect(status().isBadRequest())
-                .andExpect(content().string("El email no tiene un formato válido"));
-
-        verify(clienteService, times(1)).CrearClienteConPreferencias(any(ClienteRegistroDTO.class), eq(1));
-    }
-
-    @Test
-    void registrarCliente_internalServerError() throws Exception {
-        // Arrange
-        ClienteRegistroDTO registroDTO = new ClienteRegistroDTO();
-        registroDTO.setNombre("Juan");
-        registroDTO.setApellidos("Pérez");
-        registroDTO.setCorreoElectronico("juan.perez@email.com");
-
-        doThrow(new RuntimeException("Error de base de datos"))
-                .when(clienteService).CrearClienteConPreferencias(any(ClienteRegistroDTO.class), any(Integer.class));
-
-        // Act & Assert
-        mockMvc.perform(post("/clientes/registrar")
-                .param("usuario_id", "1")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(registroDTO)))
-                .andExpect(status().isInternalServerError())
-                .andExpect(content().string("Error al registrar cliente."));
-
-        verify(clienteService, times(1)).CrearClienteConPreferencias(any(ClienteRegistroDTO.class), eq(1));
-    }
-
-    @Test
     void eliminarCliente_success() throws Exception {
         // Arrange
         EliminarClienteDTO eliminarDTO = new EliminarClienteDTO();

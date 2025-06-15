@@ -52,37 +52,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ClienteServiceTest.buscarClientes.executor": "Run",
-    "JUnit.ClienteServiceTest.crearClienteConPreferencias.executor": "Run",
-    "JUnit.ClienteServiceTest.crearClienteConPreferencias_emptyCategories_success.executor": "Run",
-    "JUnit.ClienteServiceTest.eliminarClienteConAuditoria_success.executor": "Run",
-    "JUnit.ClienteServiceTest.executor": "Run",
-    "JUnit.ClienteServiceTest.getAllClientes.executor": "Run",
-    "JUnit.ClienteServiceTest.getUsuario.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.GestorApplication.executor": "Run",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ramir/OneDrive/Documentos/Estudio/UdeA/2025-1/Fábrica escuela/Backend/PetManager-Sistema-de-gestion-de-clientes",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ClienteServiceTest.buscarClientes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.crearClienteConPreferencias.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.crearClienteConPreferencias_emptyCategories_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.eliminarClienteConAuditoria_success.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.getAllClientes.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ClienteServiceTest.getUsuario.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.GestorApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ramir/OneDrive/Documentos/Estudio/UdeA/2025-1/Fábrica escuela/Backend/PetManager-Sistema-de-gestion-de-clientes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -92,7 +92,22 @@
       <recent name="com.petmanager.gestionclientes.gestor.service" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GestorApplication">
+  <component name="RunManager" selected="JUnit.ClienteControllerTest">
+    <configuration name="ClienteControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gestor" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petmanager.gestionclientes.gestor.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.petmanager.gestionclientes.gestor.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.petmanager.gestionclientes.gestor.controller.ClienteControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ClienteServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="gestor" />
       <extension name="coverage">
@@ -104,22 +119,6 @@
       <option name="PACKAGE_NAME" value="com.petmanager.gestionclientes.gestor.service" />
       <option name="MAIN_CLASS_NAME" value="com.petmanager.gestionclientes.gestor.service.ClienteServiceTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClienteServiceTest.buscarClientes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gestor" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.petmanager.gestionclientes.gestor.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.petmanager.gestionclientes.gestor.service" />
-      <option name="MAIN_CLASS_NAME" value="com.petmanager.gestionclientes.gestor.service.ClienteServiceTest" />
-      <option name="METHOD_NAME" value="buscarClientes" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -182,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClienteControllerTest" />
         <item itemvalue="JUnit.ClienteServiceTest" />
         <item itemvalue="JUnit.ClienteServiceTest.eliminarClienteConAuditoria_success" />
         <item itemvalue="JUnit.ClienteServiceTest.crearClienteConPreferencias_emptyCategories_success" />
         <item itemvalue="JUnit.ClienteServiceTest.crearClienteConPreferencias" />
-        <item itemvalue="JUnit.ClienteServiceTest.buscarClientes" />
       </list>
     </recent_temporary>
   </component>
